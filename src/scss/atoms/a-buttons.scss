@@ -1,0 +1,205 @@
+// ATOMS [ MISC ]  ####################################################################################################
+
+// BASE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.0. VARIABLES -----------------------------------------
+
+$btn-clr: transparent;
+$btn-clr-2: $default;
+$btn-border-color: $default;
+$buttonFont: $font;
+$buttonFontWeight: 700;
+$buttonFontSize: 20px;
+$buttonLineHeight: 24px;
+$buttonMinWidth: 113px;
+
+$lightButtonFontWeight: 400;
+$mediumButtonFontWeight: 600;
+$heavyButtonFontWeight: 900;
+
+$radius-sml: 0;
+$radius-med: 10px;
+$radius-lrg: 0;
+
+// A.0. END - VARIABLES -----------------------------------
+
+// A.1. DEFAULT BUTTON ------------------------------------
+
+.a-btn {
+  display: inline-block;
+  padding: 17px 20px;
+  margin: 0 15px;
+  font-style: normal;
+  font-family: $buttonFont;
+  font-weight: $buttonFontWeight;
+  font-size: $buttonFontSize;
+  line-height: $buttonLineHeight;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid;
+  border-radius: $radius-sml;
+  text-rendering: optimizeLegibility;
+  outline: none;
+  min-width: $buttonMinWidth;
+  transition: 0.3s;
+
+  &.btn-sml {
+    min-width: auto;
+    padding: 5px 8px;
+    margin: 0 3px;
+  }
+
+  // button spacing
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  // default hover/active classes
+  &.focus,
+  &:focus,
+  &:hover,
+  &.active,
+  &:focus,
+  &.focus,
+  &:active:focus,
+  &:active.focus,
+  &.active:focus,
+  &.active.focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  // A.1.2. PRIMARY BUTTON ----------------------------
+
+  &._primary {
+    color: $btn-clr-2;
+    background-color: $btn-clr;
+    border-color: $btn-border-color;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $btn-clr-2;
+    }
+  }
+
+  // A.1.2. END : PRIMARY BUTTON ----------------------
+
+  // A.1.3. SECONDARY BUTTON ----------------------------
+
+  &._secondary {
+    color: $white;
+    background-color: $btn-clr-2;
+    border-color: $black;
+
+    &:hover {
+      background-color: $black-39;
+      border-color: $black-39;
+    }
+  }
+
+  // A.1.2. END : PRIMARY BUTTON ----------------------
+}
+
+// DARK THEME
+
+.contact {
+  .a-btn {
+    &._primary {
+      color: $white;
+      background-color: $black;
+      border-color: $white;
+
+      &:hover {
+        box-shadow: 0 0 0 1px $white;
+      }
+    }
+    &._secondary {
+      color: $black;
+      background-color: $white;
+      border-color: $white;
+
+      &:hover {
+        color: $black;
+        background-color: $white;
+        border-color: $white;
+      }
+    }
+  }
+}
+
+// A.1. END : DEFAULT BUTTON ------------------------------
+
+// A.2. TEXT LINK ----------------------------
+
+.a-text-link {
+  color: $default;
+  position: relative;
+  overflow: hidden;
+  padding-right: 24px;
+  font-weight: 400;
+  display: inline-block;
+  &:after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    color: $default;
+  }
+}
+
+// A.2. END : TEXT LINK ------------------------------
+
+// A.3. TEXT LINK /W ICON ----------------------------
+
+.a-text-link-icn {
+  color: $default;
+  position: relative;
+  padding-right: 16px;
+  display: inline-block;
+  &:hover {
+    &:after {
+      content: "→";
+      position: absolute;
+      right: 0;
+      color: $default;
+    }
+  }
+}
+
+// A.3. END : TEXT LINK /W ICON------------------------------
+
+// END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .a-btn {
+    padding: 17px 20px;
+  }
+}
+
+@media ($lg-up) {
+  .a-text-link {
+    &:after {
+      transform: translateY(-100%);
+      transition: all 0.25s ease-in;
+    }
+    &:hover {
+      &:after {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// END OF FILE ########################################################################################################

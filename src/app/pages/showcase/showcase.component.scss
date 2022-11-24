@@ -1,0 +1,28 @@
+.a-circle {
+  max-width: 56px;
+  min-width: 56px;
+  width: 100%;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  &.bg-green {
+    background-color: #59bb67;
+  }
+  &.bg-red {
+    background-color: #ff3355;
+  }
+  &.bg-teal {
+    background-color: #5ccfe6;
+  }
+  &.bg-orange {
+    background-color: #ff9500;
+  }
+  &.bg-purple {
+    background-color: #8000ff;
+  }
+}
+
+.text-grey {
+  color: #595959;
+}

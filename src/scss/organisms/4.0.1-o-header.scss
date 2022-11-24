@@ -1,0 +1,195 @@
+// 3. ORGANISM [ 4.0.1 HEADER ] ###########################################################################################
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. GLOBAL --------------------------------------------
+.o-header {
+  .mat-toolbar {
+    position: fixed;
+    z-index: 99;
+    &.mat-primary {
+      background: $white;
+      color: $black;
+    }
+  }
+
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    padding: 0 $base-xs;
+    height: 88px;
+  }
+  .m-logo {
+    display: flex;
+    .a-logo {
+      max-width: 103px;
+    }
+    &._dark {
+      display: none;
+    }
+  }
+
+  .mat-menu-trigger {
+    .mat-icon {
+      line-height: 30px !important;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+  }
+}
+
+.cdk-overlay-connected-position-bounding-box {
+  align-items: inherit !important;
+  top: 88px !important;
+  right: 0 !important;
+  width: 100% !important;
+}
+
+.a-menu-item {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.mat-menu-panel {
+  max-width: inherit !important;
+  max-height: calc(100vh - 88px) !important;
+  width: 100%;
+  box-shadow: 0px 6px 9px rgba(151, 151, 151, 0.1);
+  border-radius: 0 !important;
+  border-top: solid 3px $grey-e7;
+
+  .mat-menu-content {
+    &:not(:empty) {
+      padding-top: $base-lg;
+      padding-bottom: 64px;
+    }
+  }
+
+  .a-menu-item {
+    display: block;
+    padding: $base-xxxs $base-xs;
+    margin-bottom: $base-xxxs;
+  }
+  .a-btn {
+    &._secondary {
+      margin-top: $base-xxxs;
+      margin-left: $base-xs;
+      padding: 12px 20px;
+      font-size: 18px;
+      line-height: 1;
+    }
+  }
+}
+
+// DARK THEME
+
+.contact {
+  .o-header {
+    .mat-toolbar {
+      &.mat-primary {
+        background: $black;
+        color: $white;
+      }
+    }
+    .m-logo {
+      &._light {
+        display: none;
+      }
+      &._dark {
+        display: block;
+      }
+    }
+  }
+  .mat-menu-panel {
+    box-shadow: 0px 0px 6px rgba(151, 151, 151, 0.3);
+    border-top: 0;
+    .mat-menu-content {
+      background-color: $black;
+    }
+    .a-menu-item {
+      color: $white;
+    }
+  }
+}
+
+// A.1. END -----------------------------------------------
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .o-header {
+    .mat-toolbar-row,
+    .mat-toolbar-single-row {
+      height: 97px;
+    }
+    .mat-toolbar {
+      .a-menu-item {
+        padding: 0 $base-xxxs;
+        margin: 0 $base-xxxs;
+      }
+      .a-btn {
+        &._secondary {
+          margin-left: $base-xxxs;
+          font-size: 18px;
+          line-height: 18px;
+          padding: 12px 20px;
+        }
+      }
+    }
+    .m-logo {
+      .a-logo {
+        max-width: inherit;
+      }
+    }
+  }
+  .contact {
+    .o-header {
+      .mat-toolbar {
+        .a-menu-item {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+  .o-header {
+    .mat-toolbar-row,
+    .mat-toolbar-single-row {
+      height: 123px;
+    }
+  }
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xl-up) {
+  // .m-logo {
+  //   .a-logo {
+  //     max-width: 220px;
+  //     width: 100%;
+  //   }
+  // }
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,140 @@
+// 3. ORGANISM [ 4.0.2 FOOTER ] ###########################################################################################
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. GLOBAL --------------------------------------------
+.o-footer {
+  background-color: $black;
+  padding-top: 64px;
+  .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .a-logo {
+    max-width: 95px;
+    margin-bottom: 16px;
+  }
+  * {
+    color: $white;
+  }
+  .m-intro {
+    margin-bottom: 40px;
+  }
+  .a-heading {
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  .a-strong {
+    margin-bottom: 32px;
+    display: inline-block;
+    font-weight: 900;
+  }
+  ul {
+    list-style: none;
+    &.m-social {
+      display: flex;
+      margin-bottom: 0;
+      li {
+        margin-right: 16px;
+        line-height: 0;
+      }
+    }
+  }
+  .m-menu {
+    margin-bottom: 32px;
+    ul {
+      margin-bottom: 0;
+      li {
+        margin-bottom: 24px;
+        a {
+          text-decoration: none;
+          font-weight: 400;
+          &:hover {
+            font-weight: 900;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .m-address {
+    address {
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+  }
+  .m-copyright {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+    p {
+      @include font(16);
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    border-bottom: 0.5px solid $grey-f7;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+// A.1. END -----------------------------------------------
+
+// A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-dn) {
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+  .o-footer {
+    padding-top: 100px;
+    .a-logo {
+      max-width: 129px;
+    }
+    .m-menu {
+      margin-bottom: 64px;
+    }
+  }
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {
+  .o-footer {
+    .a-logo {
+      max-width: 154px;
+      margin-bottom: 32px;
+    }
+    .a-heading {
+      margin-bottom: 19px;
+    }
+    .m-menu {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xl-up) {
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,216 @@
+<div class="o-contact-form">
+  <div class="container">
+    <h3>Tell us about your idea</h3>
+    <form
+      class="m-form d-lg-flex flex-wrap"
+      #ngForm="ngForm"
+      [formGroup]="contactForm"
+    >
+      <div class="form-left col-lg-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error>First name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" name="email" type="email" />
+          <mat-error *ngIf="contactForm.get('email')?.hasError('required')"
+            >Email is required</mat-error
+          >
+          <mat-error *ngIf="contactForm.get('email')?.hasError('email')"
+            >Not a valid email</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" />
+          <mat-error *ngIf="contactForm.get('phone')?.hasError('required')">
+            Phone number is required
+          </mat-error>
+          <mat-error
+            *ngIf="
+              !contactForm.get('phone')?.hasError('required') &&
+              contactForm.get('phone')?.hasError('pattern')
+            "
+          >
+            Please enter valid number
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label
+            >Anything else you think we should know? (optional)</mat-label
+          >
+          <textarea matInput formControlName="message" rows="9"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="form-right offset-lg-1 col-lg-7">
+        <p class="a-label">What service needs do you have?</p>
+        <div class="form-group d-md-flex flex-wrap" formGroupName="services">
+          <div class="p-relative m-checkbox col-md-6">
+            <mat-checkbox
+              class="a-checkbox"
+              value="Spark Innovation"
+              formControlName="sparkInnovation"
+              >Spark Innovation</mat-checkbox
+            >
+            <span
+              class="tooltip"
+              data-text="Spark Innovation is a collaborative process that includes design thinking methodologies and conceptualisation with the end goal of developing a viable solution."
+            >
+              <svg
+                width="20"
+                class="a-info"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 15.7143C9.2115 15.7143 8.57143 15.0742 8.57143 14.2857V10C8.57143 9.2115 9.2115 8.57143 10 8.57143C10.7885 8.57143 11.4286 9.2115 11.4286 10V14.2857C11.4286 15.0742 10.7885 15.7143 10 15.7143ZM10.7143 7.14286H9.28572C8.89146 7.14286 8.57143 6.82283 8.57143 6.42857V5C8.57143 4.60575 8.89146 4.28571 9.28572 4.28571H10.7143C11.1085 4.28571 11.4286 4.60575 11.4286 5V6.42857C11.4286 6.82282 11.1085 7.14286 10.7143 7.14286ZM10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="p-relative m-checkbox col-md-6">
+            <mat-checkbox
+              class="a-checkbox"
+              value="Accelation Process"
+              formControlName="accelationProcess"
+              >Accelation Process</mat-checkbox
+            >
+            <span
+              class="tooltip"
+              data-text="Spark Innovation is a collaborative process that includes design thinking methodologies and conceptualisation with the end goal of developing a viable solution."
+            >
+              <svg
+                width="20"
+                class="a-info"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 15.7143C9.2115 15.7143 8.57143 15.0742 8.57143 14.2857V10C8.57143 9.2115 9.2115 8.57143 10 8.57143C10.7885 8.57143 11.4286 9.2115 11.4286 10V14.2857C11.4286 15.0742 10.7885 15.7143 10 15.7143ZM10.7143 7.14286H9.28572C8.89146 7.14286 8.57143 6.82283 8.57143 6.42857V5C8.57143 4.60575 8.89146 4.28571 9.28572 4.28571H10.7143C11.1085 4.28571 11.4286 4.60575 11.4286 5V6.42857C11.4286 6.82282 11.1085 7.14286 10.7143 7.14286ZM10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="p-relative m-checkbox col-md-6">
+            <mat-checkbox
+              class="a-checkbox"
+              value="Website Development"
+              formControlName="websiteDevelopment"
+              >Website Development</mat-checkbox
+            >
+            <span
+              class="tooltip"
+              data-text="Spark Innovation is a collaborative process that includes design thinking methodologies and conceptualisation with the end goal of developing a viable solution."
+            >
+              <svg
+                width="20"
+                class="a-info"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 15.7143C9.2115 15.7143 8.57143 15.0742 8.57143 14.2857V10C8.57143 9.2115 9.2115 8.57143 10 8.57143C10.7885 8.57143 11.4286 9.2115 11.4286 10V14.2857C11.4286 15.0742 10.7885 15.7143 10 15.7143ZM10.7143 7.14286H9.28572C8.89146 7.14286 8.57143 6.82283 8.57143 6.42857V5C8.57143 4.60575 8.89146 4.28571 9.28572 4.28571H10.7143C11.1085 4.28571 11.4286 4.60575 11.4286 5V6.42857C11.4286 6.82282 11.1085 7.14286 10.7143 7.14286ZM10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="p-relative m-checkbox col-md-6">
+            <mat-checkbox
+              class="a-checkbox"
+              value="App Development"
+              formControlName="appDevelopment"
+              >App Development</mat-checkbox
+            >
+            <span
+              class="tooltip"
+              data-text="Spark Innovation is a collaborative process that includes design thinking methodologies and conceptualisation with the end goal of developing a viable solution."
+            >
+              <svg
+                width="20"
+                class="a-info"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10 15.7143C9.2115 15.7143 8.57143 15.0742 8.57143 14.2857V10C8.57143 9.2115 9.2115 8.57143 10 8.57143C10.7885 8.57143 11.4286 9.2115 11.4286 10V14.2857C11.4286 15.0742 10.7885 15.7143 10 15.7143ZM10.7143 7.14286H9.28572C8.89146 7.14286 8.57143 6.82283 8.57143 6.42857V5C8.57143 4.60575 8.89146 4.28571 9.28572 4.28571H10.7143C11.1085 4.28571 11.4286 4.60575 11.4286 5V6.42857C11.4286 6.82282 11.1085 7.14286 10.7143 7.14286ZM10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0Z"
+                />
+              </svg>
+            </span>
+          </div>
+          <mat-error
+            *ngIf="
+              ngForm.submitted &&
+              contactForm.controls['services'].errors &&
+              contactForm.controls['services'].errors
+                .requireOneCheckboxToBeChecked
+            "
+          >
+            Please select which service you need
+          </mat-error>
+        </div>
+        <p class="a-label">Budget range?</p>
+        <mat-radio-group class="d-md-flex flex-wrap" formControlName="budget">
+          <div *ngFor="let item of budgetList; let i = index" class="col-md-6">
+            <mat-radio-button class="a-radio" [value]="item.value">{{
+              item.name
+            }}</mat-radio-button>
+          </div>
+          <mat-error
+            *ngIf="ngForm.submitted && contactForm.controls['budget'].invalid"
+          >
+            Please select a budget range
+          </mat-error>
+        </mat-radio-group>
+        <p class="a-label">
+          Your product already exist and need support? (optional)
+        </p>
+        <mat-checkbox class="a-checkbox" formControlName="productExists"
+          >Yes</mat-checkbox
+        >
+        <button class="a-btn _primary" type="submit" (click)="submitForm()">
+          Send Now
+        </button>
+      </div>
+    </form>
+    <p class="a-label _last">
+      Any other enquires, feel free to give us a call or send an email:
+    </p>
+    <ul class="m-contact d-md-flex">
+      <li>
+        <span class="m-icn"
+          ><img src="../../../assets/icons/icon-phone.svg" alt="phone" /></span
+        ><span>+27 (0) 21 448 9660</span>
+      </li>
+      <li>
+        <span class="m-icn"
+          ><img src="../../../assets/icons/icon-email.svg" alt="email" /></span
+        ><span>hello@fonk.capetown</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="m-strip d-flex">
+  <div class="flex-fill a-strip _green"></div>
+  <div class="flex-fill a-strip _purple"></div>
+  <div class="flex-fill a-strip _orange"></div>
+  <div class="flex-fill a-strip _red"></div>
+  <div class="flex-fill a-strip _blue"></div>
+</div>

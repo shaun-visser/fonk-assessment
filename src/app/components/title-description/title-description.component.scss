@@ -1,0 +1,27 @@
+.o-title-desc {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  h1 {
+    margin-bottom: 24px;
+  }
+  h5 {
+    color: #595959;
+  }
+}
+
+@media (min-width: 768px) {
+  .o-title-desc {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-title-desc {
+    padding-top: 144px;
+    padding-bottom: 144px;
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
+}
